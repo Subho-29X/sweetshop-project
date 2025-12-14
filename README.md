@@ -4,6 +4,32 @@ A full-stack Sweet Shop Management System built with a Spring Boot backend and a
 
 This repository acts as the parent project, combining both backend and frontend into a single, organized codebase suitable for development, evaluation, and deployment.
 
+---
+## 🚀 Quick Start (TL;DR)
+
+```bash
+git clone --recurse-submodules https://github.com/Subho-29X/sweetshop-project.git
+cd sweetshop-project
+
+# Backend
+cd backend
+./mvnw spring-boot:run
+
+# Frontend (new terminal)
+cd frontend
+npm install
+npm run dev
+Frontend: http://localhost:5173
+Backend: http://localhost:8080
+```
+
+⚠️ If the backend folder is empty after cloning, run:
+
+```bash
+git submodule update --init --recursive
+```
+---
+
 ## 📌 Project Overview
 
 The application allows users to:
@@ -116,9 +142,26 @@ http://localhost:5173
 ---
 
 ## 🔐 Authentication & Roles
-- **JWT-based authentication**
-- **Role-based access control**
-- **Admin-only routes protected on both frontend and backend**
+
+- JWT-based authentication
+- Role-based authorization (USER / ADMIN)
+- Admin-only routes protected on both frontend and backend
+
+---
+
+## 🔑 Test Credentials (For Evaluation)
+
+### Admin User
+
+- Email: `subho@gmail.com`
+- Password: `12345`
+
+### Normal User
+
+- Email: `tester1@sweet.com`
+- Password: `TEST123`
+
+(If users are not pre-seeded, they can be created using the Register page.)
 
 ---
 
