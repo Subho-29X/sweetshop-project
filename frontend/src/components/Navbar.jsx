@@ -20,7 +20,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <Link to="/">Dashboard</Link>
+        {/* <Link to="/">Dashboard</Link> */}
+        <Link to="/dashboard">Dashboard</Link>
 
         {token && user?.role === "ADMIN" && (
           <>

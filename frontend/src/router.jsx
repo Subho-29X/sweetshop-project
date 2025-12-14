@@ -14,18 +14,19 @@
 //   return (
 //     <BrowserRouter>
 //       <Routes>
-//         {/* Public routes */}
+//         {/* 🔓 Public routes */}
+//         <Route path="/" element={<Register />} />
 //         <Route path="/login" element={<Login />} />
 //         <Route path="/register" element={<Register />} />
 
-//         {/* Protected routes */}
+//         {/* 🔐 Protected routes */}
 //         <Route element={<ProtectedRoute />}>
 //           <Route element={<Layout />}>
 //             {/* User routes */}
-//             <Route path="/" element={<Dashboard />} />
+//             <Route path="/dashboard" element={<Dashboard />} />
 //             <Route path="/sweets/:id" element={<SweetDetails />} />
 
-//             {/* Admin-only routes */}
+//             {/* 👑 Admin-only routes */}
 //             <Route element={<ProtectedRoute adminOnly />}>
 //               <Route path="/admin" element={<AdminPanel />} />
 //               <Route path="/add-sweet" element={<AddSweet />} />
@@ -34,7 +35,7 @@
 //           </Route>
 //         </Route>
 
-//         {/* Fallback */}
+//         {/* ❌ Fallback */}
 //         <Route path="*" element={<NotFound />} />
 //       </Routes>
 //     </BrowserRouter>
@@ -60,18 +61,17 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         {/* 🔓 Public routes */}
-        <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
         {/* 🔐 Protected routes */}
         <Route element={<ProtectedRoute />}>
           <Route element={<Layout />}>
-            {/* User routes */}
+            <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/sweets/:id" element={<SweetDetails />} />
 
-            {/* 👑 Admin-only routes */}
+            {/* 👑 Admin routes */}
             <Route element={<ProtectedRoute adminOnly />}>
               <Route path="/admin" element={<AdminPanel />} />
               <Route path="/add-sweet" element={<AddSweet />} />
@@ -80,7 +80,6 @@ const Router = () => {
           </Route>
         </Route>
 
-        {/* ❌ Fallback */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

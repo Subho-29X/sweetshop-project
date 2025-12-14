@@ -197,6 +197,14 @@ select {
   background: var(--bg-secondary);
 }
 
+input[type="number"] {
+  min-width: 100px;
+  width: auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
