@@ -147,11 +147,18 @@ cd backend
 (Add screenshots before final submission)  
 
 **Suggested screenshots:**
-- Login & Register pages  
-- Sweet dashboard  
-- Sweet details page  
-- Admin panel  
-- Add / Update sweet forms  
+- Login & Register pages
+  <img width="1470" height="314" alt="Screenshot 2025-12-14 at 2 35 15 PM" src="https://github.com/user-attachments/assets/8e0c98eb-0748-47fe-a352-b031175bb985" />
+
+- Sweet dashboard
+  <img width="1470" height="731" alt="Screenshot 2025-12-14 at 2 36 00 PM" src="https://github.com/user-attachments/assets/aa3117b7-5d42-4906-9c71-a86f675f2760" />
+
+- Admin panel
+ <img width="1462" height="807" alt="Screenshot 2025-12-14 at 2 36 44 PM" src="https://github.com/user-attachments/assets/923af966-9c51-4c3d-933a-a217ba9b10fe" />
+
+- Add / Update sweet forms
+  <img width="1470" height="607" alt="Screenshot 2025-12-14 at 2 38 04 PM" src="https://github.com/user-attachments/assets/8432b83f-c2a2-4f16-95ac-84d8762b4901" />
+
 
 ---
 
