@@ -70,7 +70,7 @@ git push
 ## 🧱 Tech Stack
 
 ### Backend
-- Java 23
+- Java 17
 - Spring Boot  
 - Spring Security (JWT)  
 - Spring Data JPA  
