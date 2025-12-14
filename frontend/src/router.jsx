@@ -7,36 +7,34 @@
 // import UpdateSweet from "./pages/UpdateSweet";
 // import SweetDetails from "./pages/SweetDetails";
 // import NotFound from "./pages/NotFound";
+// import AdminPanel from "./pages/AdminPanel";
 // import Layout from "./components/Layout";
 
 // const Router = () => {
 //   return (
 //     <BrowserRouter>
 //       <Routes>
-//         {/* Public */}
+//         {/* Public routes */}
 //         <Route path="/login" element={<Login />} />
 //         <Route path="/register" element={<Register />} />
 
-//         {/* Protected + Layout */}
+//         {/* Protected routes */}
 //         <Route element={<ProtectedRoute />}>
 //           <Route element={<Layout />}>
+//             {/* User routes */}
 //             <Route path="/" element={<Dashboard />} />
 //             <Route path="/sweets/:id" element={<SweetDetails />} />
 
-//             {/* Admin only
+//             {/* Admin-only routes */}
 //             <Route element={<ProtectedRoute adminOnly />}>
+//               <Route path="/admin" element={<AdminPanel />} />
 //               <Route path="/add-sweet" element={<AddSweet />} />
 //               <Route path="/sweets/edit/:id" element={<UpdateSweet />} />
-//             </Route> */}
+//             </Route>
+//           </Route>
+//         </Route>
 
-//   {/* ADMIN ONLY */}
-//     <Route element={<ProtectedRoute adminOnly />}>
-//       <Route path="/admin" element={<AdminPanel />} />
-//       <Route path="/add-sweet" element={<AddSweet />} />
-//       <Route path="/sweets/edit/:id" element={<UpdateSweet />} />
-//     </Route>
-
-//        </Route>
+//         {/* Fallback */}
 //         <Route path="*" element={<NotFound />} />
 //       </Routes>
 //     </BrowserRouter>
@@ -61,18 +59,19 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public routes */}
+        {/* 🔓 Public routes */}
+        <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Protected routes */}
+        {/* 🔐 Protected routes */}
         <Route element={<ProtectedRoute />}>
           <Route element={<Layout />}>
             {/* User routes */}
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/sweets/:id" element={<SweetDetails />} />
 
-            {/* Admin-only routes */}
+            {/* 👑 Admin-only routes */}
             <Route element={<ProtectedRoute adminOnly />}>
               <Route path="/admin" element={<AdminPanel />} />
               <Route path="/add-sweet" element={<AddSweet />} />
@@ -81,7 +80,7 @@ const Router = () => {
           </Route>
         </Route>
 
-        {/* Fallback */}
+        {/* ❌ Fallback */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
